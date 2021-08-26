@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+</head>
+
+<body onload="getUserName()">
+    <h1 id="message"></h1>
+    <div id="formCont">
+        <form onsubmit="productHandle();" action="#">
+            <label for="productInput">Product</label>
+            <input style="margin-left:5px;" placeholder="Product name or type" required="required" id="productInput"
+                type="text" />
+            <label style="margin-left:20px;" for="quantityInput">Quantity</label>
+            <input style="margin-left:5px;" placeholder="0" required="required" id="quantityInput" min="1" max="100"
+                type="number" />
+            <input style="margin-left:20px;" type="submit" value="Add to the list!" />
+        </form>
+    </div>
+    <br />
+    <div id="listCont">
+        <table cellpadding="5" id="listTable">
+            <tr onclick="removeItem(this)">
+                <th>No</th>
+                <th>Product</th>
+                <th>Quantity</th>
+            </tr>
+        </table>
+    </div>
+    <button onclick="logOut()">Log out</button>
+    <script src="script.js"></script>
+</body>
+
+</html>

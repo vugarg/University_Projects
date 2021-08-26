@@ -1,0 +1,133 @@
+@charset "UTF-8";
+@import "main.css";
+body {
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  width: auto;
+  height: auto;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: top left;
+  font-family: sans-serif;
+  color: black;
+}
+@media print {
+  body *{
+    color: black !important;
+  }
+  header{
+    display: none;
+  }
+  h1,h2 {
+    text-shadow: 0px 0px black !important;
+  }
+  .departed::after {
+    color: black !important;
+}
+
+header {
+  height: 150px;
+  background-color: rgba(148, 149, 151, 0.5);
+}
+nav {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  width: 600px;
+  top: 120px;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  background-color: rgb(0, 0, 0);
+  overflow: auto;
+}
+nav ul li {
+  text-decoration: none;
+  float: left;
+  padding: 2px;
+  margin-right: 10px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.993);
+}
+.menu a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.menu a:hover {
+  color: rgb(223, 47, 35);
+}
+nav ul:hover {
+  background-color: rgb(197, 200, 201);
+}
+h1,
+h2 {
+  color: red;
+}
+h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px red;
+}
+h2 {
+  font-size: 23px;
+  text-shadow: 1px 1px red;
+}
+article {
+  padding: 20px;
+}
+
+#flight-statuses {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-bottom: 50px;
+}
+
+tr {
+  height: 40px;
+}
+
+tr:nth-child(odd) {
+  background-color: white;
+}
+
+tr:nth-child(even) {
+  background-color: lightgrey;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+td {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#flight-statuses tr:hover {
+  background-color: lightskyblue;
+  border-bottom: 2px solid red;
+  border-top: 2px solid red;
+}
+
+.cancelled {
+  color: red;
+  font-weight: bold;
+}
+
+.departed {
+  color: green;
+}
+
+.departed::after {
+  color: green;
+  padding-left: 10px;
+  font-size: 18px;
+  content: '\2708';
+}
